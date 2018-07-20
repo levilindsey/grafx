@@ -2,7 +2,7 @@ import {
   animator,
   PersistentAnimationJob
 }
-from '../../../animatex';
+from 'lsl-animatex';
 import { PhysicsEngine } from 'lsl-physx';
 import {
   ProgramWrapper,

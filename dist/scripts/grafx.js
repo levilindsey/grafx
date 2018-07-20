@@ -24,21 +24,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  * An AnimationJob is used with the animator controller to update and re-draw something each frame.
@@ -68,8 +56,10 @@ var AnimationJob = function () {
    * @return {boolean}
    */
 
+
   _createClass(AnimationJob, [{
     key: 'start',
+
 
     /**
      * Sets this AnimationJob as started.
@@ -150,15 +140,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.animator = undefined;
 
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _frameLatencyProfiler = require('./frame-latency-profiler');
 
@@ -166,11 +148,7 @@ var _persistentAnimationJob = require('./persistent-animation-job');
 
 var _transientAnimationJob = require('./transient-animation-job');
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var _DELTA_TIME_UPPER_THRESHOLD = 200;
 var _FRAME_DURATION_WARNING_THRESHOLD = 1000 / 30;
@@ -205,6 +183,7 @@ var Animator = function () {
    *
    * @param {AnimationJob} job
    */
+
 
   _createClass(Animator, [{
     key: 'startJob',
@@ -496,21 +475,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  * This class keeps track of avg/min/max frame latencies over the last logging time period and
@@ -668,42 +635,20 @@ Object.keys(_transientAnimationJob).forEach(function (key) {
 },{"./animation-job":2,"./animator":3,"./frame-latency-profiler":4,"./persistent-animation-job":6,"./transient-animation-job":7}],6:[function(require,module,exports){
 'use strict';
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.PersistentAnimationJob = undefined;
 
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _animationJob = require('./animation-job');
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /**
  * A PersistentAnimationJob recurs or has an indefinite duration.
@@ -732,6 +677,7 @@ var PersistentAnimationJob = function (_AnimationJob) {
    * @abstract
    */
 
+
   _createClass(PersistentAnimationJob, [{
     key: 'reset',
     value: function reset() {
@@ -748,44 +694,22 @@ exports.PersistentAnimationJob = PersistentAnimationJob;
 },{"./animation-job":2}],7:[function(require,module,exports){
 'use strict';
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.TransientAnimationJob = undefined;
 
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _util2 = require('./util');
 
 var _animationJob = require('./animation-job');
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /**
  * A TransientAnimationJob is temporary and has a definite beginning and end.
@@ -820,6 +744,7 @@ var TransientAnimationJob = function (_AnimationJob) {
   /**
    * @returns {number}
    */
+
 
   _createClass(TransientAnimationJob, [{
     key: 'endTime',
@@ -893,827 +818,8 @@ var _util = {
 exports._util = _util;
 
 },{}],9:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _src = require('./src');
-
-Object.keys(_src).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _src[key];
-    }
-  });
-});
-
-},{"./src":13}],10:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-/**
- * An AnimationJob is used with the animator controller to update and re-draw something each frame.
- *
- * @abstract
- */
-var AnimationJob = function () {
-  /**
-   * @param {Function} [onComplete] A callback to be called when this AnimationJob is finished.
-   */
-  function AnimationJob(onComplete) {
-    _classCallCheck(this, AnimationJob);
-
-    // AnimationJob is an abstract class. It should not be instantiated directly.
-    if (new.target === AnimationJob) {
-      throw new TypeError('Cannot construct AnimationJob instances directly');
-    }
-
-    this._startTime = 0;
-    this._isComplete = true;
-    this._onComplete = onComplete;
-  }
-
-  /**
-   * Indicates whether this AnimationJob is complete.
-   *
-   * @return {boolean}
-   */
-
-
-  _createClass(AnimationJob, [{
-    key: 'start',
-
-
-    /**
-     * Sets this AnimationJob as started.
-     *
-     * @param {DOMHighResTimeStamp} startTime
-     */
-    value: function start(startTime) {
-      this._startTime = startTime;
-      this._isComplete = false;
-    }
-
-    /**
-     * Updates the animation progress of this AnimationJob to match the given time.
-     *
-     * This is called from the overall animation loop.
-     *
-     * @param {DOMHighResTimeStamp} currentTime
-     * @param {DOMHighResTimeStamp} deltaTime
-     * @abstract
-     */
-
-  }, {
-    key: 'update',
-    value: function update(currentTime, deltaTime) {
-      // Extending classes should implement this method.
-      throw new TypeError('Method not implemented');
-    }
-
-    /**
-     * Draws the current state of this AnimationJob.
-     *
-     * This is called from the overall animation loop.
-     *
-     * @abstract
-     */
-
-  }, {
-    key: 'draw',
-    value: function draw() {
-      // Extending classes should implement this method.
-      throw new TypeError('Method not implemented');
-    }
-
-    /**
-     * Handles any necessary state for this AnimationJob being finished.
-     *
-     * @param {boolean} isCancelled
-     */
-
-  }, {
-    key: 'finish',
-    value: function finish(isCancelled) {
-      console.log(this.constructor.name + ' ' + (isCancelled ? 'cancelled' : 'completed'));
-
-      this._isComplete = true;
-
-      if (this._onComplete) {
-        this._onComplete();
-      }
-    }
-  }, {
-    key: 'isComplete',
-    get: function get() {
-      return this._isComplete;
-    }
-  }]);
-
-  return AnimationJob;
-}();
-
-exports.AnimationJob = AnimationJob;
-
-},{}],11:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.animator = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _frameLatencyProfiler = require('./frame-latency-profiler');
-
-var _persistentAnimationJob = require('./persistent-animation-job');
-
-var _transientAnimationJob = require('./transient-animation-job');
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var _DELTA_TIME_UPPER_THRESHOLD = 200;
-var _FRAME_DURATION_WARNING_THRESHOLD = 1000 / 30;
-var _FRAME_LATENCY_LOG_PERIOD = 5000;
-var _LATENCY_LOG_LABEL = 'Animation frame period';
-
-/**
- * This class handles the animation loop.
- *
- * This class's responsibilities include:
- * - updating modules for the current frame,
- * - drawing renderables for the current frame,
- * - starting and stopping transient animation jobs,
- * - capping time step durations at a max threshold.
- */
-
-var Animator = function () {
-  function Animator() {
-    _classCallCheck(this, Animator);
-
-    this._jobs = [];
-    this._previousTime = null;
-    this._isPaused = true;
-    this._requestAnimationFrameId = null;
-    this._totalUnpausedRunTime = 0;
-    this._lastUnpauseTime = null;
-    this._latencyProfiler = new _frameLatencyProfiler.FrameLatencyProfiler(_FRAME_LATENCY_LOG_PERIOD, _FRAME_DURATION_WARNING_THRESHOLD, _LATENCY_LOG_LABEL);
-  }
-
-  /**
-   * Starts the given AnimationJob.
-   *
-   * @param {AnimationJob} job
-   */
-
-
-  _createClass(Animator, [{
-    key: 'startJob',
-    value: function startJob(job) {
-      // Is this a restart?
-      if (!job.isComplete) {
-        console.debug('Restarting AnimationJob: ' + job.constructor.name);
-
-        if (job instanceof _persistentAnimationJob.PersistentAnimationJob) {
-          job.reset();
-        } else {
-          job.finish(true);
-          job.start(window.performance.now());
-        }
-      } else {
-        console.debug('Starting AnimationJob: ' + job.constructor.name);
-
-        job.start(this._previousTime);
-        this._jobs.push(job);
-      }
-
-      this._startAnimationLoop();
-    }
-
-    /**
-     * Cancels the given AnimationJob.
-     *
-     * @param {AnimationJob} job
-     */
-
-  }, {
-    key: 'cancelJob',
-    value: function cancelJob(job) {
-      console.debug('Cancelling AnimationJob: ' + job.constructor.name);
-      job.finish(true);
-    }
-
-    /**
-     * Cancels all running AnimationJobs.
-     */
-
-  }, {
-    key: 'cancelAll',
-    value: function cancelAll() {
-      while (this._jobs.length) {
-        this.cancelJob(this._jobs[0]);
-      }
-    }
-
-    /** @returns {DOMHighResTimeStamp} */
-
-  }, {
-    key: 'pause',
-    value: function pause() {
-      this._stopAnimationLoop();
-      console.debug('Animator paused');
-    }
-  }, {
-    key: 'unpause',
-    value: function unpause() {
-      this._startAnimationLoop();
-      console.debug('Animator unpaused');
-    }
-
-    /**
-     * This is the animation loop that drives all of the animation.
-     *
-     * @param {DOMHighResTimeStamp} currentTime
-     * @private
-     */
-
-  }, {
-    key: '_animationLoop',
-    value: function _animationLoop(currentTime) {
-      var _this = this;
-
-      // When pausing and restarting, it's possible for the previous time to be slightly inconsistent
-      // with the animationFrame time.
-      if (currentTime < this._previousTime) {
-        this._previousTime = currentTime - 1;
-      }
-
-      var deltaTime = currentTime - this._previousTime;
-      this._previousTime = currentTime;
-
-      this._latencyProfiler.recordFrameLatency(deltaTime);
-
-      // Large delays between frames can cause lead to instability in the system, so this caps them to
-      // a max threshold.
-      deltaTime = deltaTime > _DELTA_TIME_UPPER_THRESHOLD ? _DELTA_TIME_UPPER_THRESHOLD : deltaTime;
-
-      if (!this._isPaused) {
-        this._requestAnimationFrameId = window.requestAnimationFrame(function (currentTime) {
-          return _this._animationLoop(currentTime);
-        });
-        this._updateJobs(currentTime, deltaTime);
-        this._drawJobs();
-      }
-    }
-
-    /**
-     * Updates all of the active AnimationJobs.
-     *
-     * @param {DOMHighResTimeStamp} currentTime
-     * @param {DOMHighResTimeStamp} deltaTime
-     * @private
-     */
-
-  }, {
-    key: '_updateJobs',
-    value: function _updateJobs(currentTime, deltaTime) {
-      for (var i = 0, count = this._jobs.length; i < count; i++) {
-        var job = this._jobs[i];
-
-        // Remove jobs from the list after they are complete.
-        if (job.isComplete) {
-          this._removeJob(job, i);
-          i--;
-          count--;
-          continue;
-        }
-
-        // Check whether the job is transient and has reached its end.
-        if (job instanceof _transientAnimationJob.TransientAnimationJob && job.endTime < currentTime) {
-          job.finish(false);
-        } else {
-          job.update(currentTime, deltaTime);
-        }
-      }
-    }
-
-    /**
-     * Removes the given job from the collection of active, animating jobs.
-     *
-     * @param {AnimationJob} job
-     * @param {number} [index=-1]
-     * @private
-     */
-
-  }, {
-    key: '_removeJob',
-    value: function _removeJob(job) {
-      var index = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : -1;
-
-      console.debug('Removing AnimationJob: ' + job.constructor.name);
-
-      if (index >= 0) {
-        this._jobs.splice(index, 1);
-      } else {
-        var count = this._jobs.length;
-        for (index = 0; index < count; index++) {
-          if (this._jobs[index] === job) {
-            this._jobs.splice(index, 1);
-            break;
-          }
-        }
-      }
-
-      // Stop the animation loop when there are no more jobs to animate.
-      if (this._jobs.length === 0) {
-        this._stopAnimationLoop();
-      }
-    }
-
-    /**
-     * Draws all of the active AnimationJobs.
-     *
-     * @private
-     */
-
-  }, {
-    key: '_drawJobs',
-    value: function _drawJobs() {
-      for (var i = 0, count = this._jobs.length; i < count; i++) {
-        this._jobs[i].draw();
-      }
-    }
-
-    /**
-     * Starts the animation loop if it is not already running.
-     *
-     * This method is idempotent.
-     *
-     * @private
-     */
-
-  }, {
-    key: '_startAnimationLoop',
-    value: function _startAnimationLoop() {
-      var _this2 = this;
-
-      if (this._isPaused) {
-        this._lastUnpauseTime = window.performance.now();
-      }
-      this._isPaused = false;
-
-      // Only actually start the loop if it isn't already running and the page has focus.
-      if (!this._requestAnimationFrameId && !document.hidden) {
-        this._latencyProfiler.start();
-        this._previousTime = window.performance.now();
-        this._requestAnimationFrameId = window.requestAnimationFrame(function (time) {
-          return _this2._animationLoop(time);
-        });
-      }
-    }
-
-    /**
-     * Stops the animation loop.
-     *
-     * @private
-     */
-
-  }, {
-    key: '_stopAnimationLoop',
-    value: function _stopAnimationLoop() {
-      if (!this._isPaused) {
-        this._totalUnpausedRunTime += this._timeSinceLastPaused;
-      }
-      this._isPaused = true;
-      window.cancelAnimationFrame(this._requestAnimationFrameId);
-      this._requestAnimationFrameId = null;
-      this._latencyProfiler.stop();
-    }
-
-    /**
-     * Creates a promise that will resolve on the next animation loop.
-     *
-     * @returns {Promise}
-     */
-
-  }, {
-    key: 'resolveOnNextFrame',
-    value: function resolveOnNextFrame() {
-      return new Promise(window.requestAnimationFrame);
-    }
-
-    /**
-     * Gets the total amount of time the animator has been running while not paused.
-     *
-     * @returns {DOMHighResTimeStamp}
-     */
-
-  }, {
-    key: 'currentTime',
-    get: function get() {
-      return this._previousTime;
-    }
-
-    /** @returns {boolean} */
-
-  }, {
-    key: 'isPaused',
-    get: function get() {
-      return this._isPaused;
-    }
-  }, {
-    key: 'totalRunTime',
-    get: function get() {
-      return this._isPaused ? this._totalUnpausedRunTime : this._totalUnpausedRunTime + this._timeSinceLastPaused;
-    }
-
-    /**
-     * @returns {DOMHighResTimeStamp}
-     */
-
-  }, {
-    key: '_timeSinceLastPaused',
-    get: function get() {
-      return window.performance.now() - this._lastUnpauseTime;
-    }
-  }]);
-
-  return Animator;
-}();
-
-var animator = new Animator();
-
-exports.animator = animator;
-
-/**
- * @typedef {number} DOMHighResTimeStamp A number of milliseconds, accurate to one thousandth of a
- * millisecond.
- */
-
-},{"./frame-latency-profiler":12,"./persistent-animation-job":14,"./transient-animation-job":15}],12:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-/**
- * This class keeps track of avg/min/max frame latencies over the last logging time period and
- * periodically logs these values.
- */
-var FrameLatencyProfiler = function () {
-  /**
-   * @param {number} logPeriod The period at which to print latency log messages. In milliseconds.
-   * @param {number} latencyWarningThreshold If the average latency exceeds this threshold, then the
-   * log message is shown as a warning. In milliseconds.
-   * @param {string} logLabel A label to show for each latency log message.
-   */
-  function FrameLatencyProfiler(logPeriod, latencyWarningThreshold, logLabel) {
-    _classCallCheck(this, FrameLatencyProfiler);
-
-    this._logPeriod = logPeriod;
-    this._latencyWarningThreshold = latencyWarningThreshold;
-    this._logLabel = logLabel;
-
-    this._frameCount = null;
-    this._maxFrameLatency = null;
-    this._minFrameLatency = null;
-    this._avgFrameLatency = null;
-
-    this._intervalId = null;
-  }
-
-  _createClass(FrameLatencyProfiler, [{
-    key: "start",
-    value: function start() {
-      var _this = this;
-
-      this.stop();
-      this.reset();
-
-      this._intervalId = setInterval(function () {
-        _this.logFrameLatency();
-        _this.reset();
-      }, this._logPeriod);
-    }
-  }, {
-    key: "stop",
-    value: function stop() {
-      clearInterval(this._intervalId);
-    }
-  }, {
-    key: "reset",
-    value: function reset() {
-      this._frameCount = 0;
-      this._maxFrameLatency = Number.MIN_VALUE;
-      this._minFrameLatency = Number.MAX_VALUE;
-      this._avgFrameLatency = 0;
-    }
-
-    /**
-     * Keeps track of a running average, min value, and max value for the frame latencies.
-     *
-     * @param {DOMHighResTimeStamp} frameLatency
-     */
-
-  }, {
-    key: "recordFrameLatency",
-    value: function recordFrameLatency(frameLatency) {
-      this._frameCount++;
-      this._maxFrameLatency = this._maxFrameLatency < frameLatency ? frameLatency : this._maxFrameLatency;
-      this._minFrameLatency = this._minFrameLatency > frameLatency ? frameLatency : this._minFrameLatency;
-      this._avgFrameLatency = this._avgFrameLatency + (frameLatency - this._avgFrameLatency) / this._frameCount;
-    }
-  }, {
-    key: "logFrameLatency",
-    value: function logFrameLatency() {
-      if (this._frameCount > 0) {
-        var message = this._logLabel + ":  AVG=" + this._avgFrameLatency.toFixed(3) + "  " + ("(MAX=" + this._maxFrameLatency.toFixed(3) + "; MIN=" + this._minFrameLatency.toFixed(3) + ")");
-        if (this._maxFrameLatency >= this._latencyWarningThreshold) {
-          console.warn(message);
-        } else {
-          console.debug(message);
-        }
-      }
-    }
-  }]);
-
-  return FrameLatencyProfiler;
-}();
-
-exports.FrameLatencyProfiler = FrameLatencyProfiler;
-
-},{}],13:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _animationJob = require('./animation-job');
-
-Object.keys(_animationJob).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _animationJob[key];
-    }
-  });
-});
-
-var _animator = require('./animator');
-
-Object.keys(_animator).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _animator[key];
-    }
-  });
-});
-
-var _frameLatencyProfiler = require('./frame-latency-profiler');
-
-Object.keys(_frameLatencyProfiler).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _frameLatencyProfiler[key];
-    }
-  });
-});
-
-var _persistentAnimationJob = require('./persistent-animation-job');
-
-Object.keys(_persistentAnimationJob).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _persistentAnimationJob[key];
-    }
-  });
-});
-
-var _transientAnimationJob = require('./transient-animation-job');
-
-Object.keys(_transientAnimationJob).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _transientAnimationJob[key];
-    }
-  });
-});
-
-},{"./animation-job":10,"./animator":11,"./frame-latency-profiler":12,"./persistent-animation-job":14,"./transient-animation-job":15}],14:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.PersistentAnimationJob = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _animationJob = require('./animation-job');
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-/**
- * A PersistentAnimationJob recurs or has an indefinite duration.
- *
- * @abstract
- */
-var PersistentAnimationJob = function (_AnimationJob) {
-  _inherits(PersistentAnimationJob, _AnimationJob);
-
-  /**
-   * @param {Function} [onComplete] A callback to be called when this AnimationJob is finished.
-   */
-  function PersistentAnimationJob(onComplete) {
-    _classCallCheck(this, PersistentAnimationJob);
-
-    // PersistentAnimationJob is an abstract class. It should not be instantiated directly.
-    var _this = _possibleConstructorReturn(this, (PersistentAnimationJob.__proto__ || Object.getPrototypeOf(PersistentAnimationJob)).call(this, onComplete));
-
-    if (new.target === PersistentAnimationJob) {
-      throw new TypeError('Cannot construct PersistentAnimationJob instances directly');
-    }
-    return _this;
-  }
-
-  /**
-   * @abstract
-   */
-
-
-  _createClass(PersistentAnimationJob, [{
-    key: 'reset',
-    value: function reset() {
-      // Extending classes should implement this method.
-      throw new TypeError('Method not implemented');
-    }
-  }]);
-
-  return PersistentAnimationJob;
-}(_animationJob.AnimationJob);
-
-exports.PersistentAnimationJob = PersistentAnimationJob;
-
-},{"./animation-job":10}],15:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.TransientAnimationJob = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _util2 = require('./util');
-
-var _animationJob = require('./animation-job');
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-/**
- * A TransientAnimationJob is temporary and has a definite beginning and end.
- *
- * @abstract
- */
-var TransientAnimationJob = function (_AnimationJob) {
-  _inherits(TransientAnimationJob, _AnimationJob);
-
-  /**
-   * @param {number} duration
-   * @param {number} delay
-   * @param {Function|String} easingFunction
-   * @param {Function} [onComplete] A callback to be called when this AnimationJob is finished.
-   */
-  function TransientAnimationJob(duration, delay, easingFunction, onComplete) {
-    _classCallCheck(this, TransientAnimationJob);
-
-    // TransientAnimationJob is an abstract class. It should not be instantiated directly.
-    var _this = _possibleConstructorReturn(this, (TransientAnimationJob.__proto__ || Object.getPrototypeOf(TransientAnimationJob)).call(this, onComplete));
-
-    if (new.target === TransientAnimationJob) {
-      throw new TypeError('Cannot construct TransientAnimationJob instances directly');
-    }
-
-    _this._duration = duration;
-    _this._delay = delay;
-    _this._easingFunction = typeof easingFunction === 'function' ? easingFunction : _util2._util.easingFunctions[easingFunction];
-    return _this;
-  }
-
-  /**
-   * @returns {number}
-   */
-
-
-  _createClass(TransientAnimationJob, [{
-    key: 'endTime',
-    get: function get() {
-      return this._startTime + this._duration + this._delay;
-    }
-  }]);
-
-  return TransientAnimationJob;
-}(_animationJob.AnimationJob);
-
-exports.TransientAnimationJob = TransientAnimationJob;
-
-},{"./animation-job":10,"./util":16}],16:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-/**
- * This module defines a collection of static utility functions.
- */
-
-// A collection of different types of easing functions.
-var easingFunctions = {
-  linear: function linear(t) {
-    return t;
-  },
-  easeInQuad: function easeInQuad(t) {
-    return t * t;
-  },
-  easeOutQuad: function easeOutQuad(t) {
-    return t * (2 - t);
-  },
-  easeInOutQuad: function easeInOutQuad(t) {
-    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-  },
-  easeInCubic: function easeInCubic(t) {
-    return t * t * t;
-  },
-  easeOutCubic: function easeOutCubic(t) {
-    return 1 + --t * t * t;
-  },
-  easeInOutCubic: function easeInOutCubic(t) {
-    return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-  },
-  easeInQuart: function easeInQuart(t) {
-    return t * t * t * t;
-  },
-  easeOutQuart: function easeOutQuart(t) {
-    return 1 - --t * t * t * t;
-  },
-  easeInOutQuart: function easeInOutQuart(t) {
-    return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * --t * t * t * t;
-  },
-  easeInQuint: function easeInQuint(t) {
-    return t * t * t * t * t;
-  },
-  easeOutQuint: function easeOutQuint(t) {
-    return 1 + --t * t * t * t * t;
-  },
-  easeInOutQuint: function easeInOutQuint(t) {
-    return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t;
-  }
-};
-
-var _util = {
-  easingFunctions: easingFunctions
-};
-
-exports._util = _util;
-
-},{}],17:[function(require,module,exports){
-arguments[4][9][0].apply(exports,arguments)
-},{"./src":41,"dup":9}],18:[function(require,module,exports){
+arguments[4][1][0].apply(exports,arguments)
+},{"./src":33,"dup":1}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1792,7 +898,7 @@ Object.keys(_sphereCollidable).forEach(function (key) {
   });
 });
 
-},{"./src/aabb-collidable":19,"./src/capsule-collidable":20,"./src/collidable":21,"./src/line-segment":22,"./src/obb-collidable":23,"./src/sphere-collidable":24}],19:[function(require,module,exports){
+},{"./src/aabb-collidable":11,"./src/capsule-collidable":12,"./src/collidable":13,"./src/line-segment":14,"./src/obb-collidable":15,"./src/sphere-collidable":16}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2135,7 +1241,7 @@ var _segment = new _lineSegment.LineSegment(vec3.create(), vec3.create());
 
 exports.Aabb = Aabb;
 
-},{"../../../util":48,"./collidable":21,"./line-segment":22}],20:[function(require,module,exports){
+},{"../../../util":40,"./collidable":13,"./line-segment":14}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2238,7 +1344,7 @@ var Capsule = function (_Collidable) {
 
 exports.Capsule = Capsule;
 
-},{"./collidable":21,"./line-segment":22}],21:[function(require,module,exports){
+},{"./collidable":13,"./line-segment":14}],13:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2343,7 +1449,7 @@ var Collidable = function () {
 
 exports.Collidable = Collidable;
 
-},{}],22:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2457,7 +1563,7 @@ var LineSegment = function () {
 
 exports.LineSegment = LineSegment;
 
-},{"../../../util":48}],23:[function(require,module,exports){
+},{"../../../util":40}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2823,7 +1929,7 @@ exports.Obb = Obb;
  * @returns {boolean} If true, iteration will stop.
  */
 
-},{"./collidable":21,"./line-segment":22,"./sphere-collidable":24}],24:[function(require,module,exports){
+},{"./collidable":13,"./line-segment":14,"./sphere-collidable":16}],16:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2931,7 +2037,7 @@ var Sphere = function (_Collidable) {
 
 exports.Sphere = Sphere;
 
-},{"./collidable":21}],25:[function(require,module,exports){
+},{"./collidable":13}],17:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2962,7 +2068,7 @@ exports.capsuleCollisionDetection = capsuleCollisionDetection;
 exports.obbCollisionDetection = obbCollisionDetection;
 exports.sphereCollisionDetection = sphereCollisionDetection;
 
-},{"./src/aabb-collision-detection":26,"./src/capsule-collision-detection":27,"./src/obb-collision-detection":28,"./src/sphere-collision-detection":29}],26:[function(require,module,exports){
+},{"./src/aabb-collision-detection":18,"./src/capsule-collision-detection":19,"./src/obb-collision-detection":20,"./src/sphere-collision-detection":21}],18:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3042,7 +2148,7 @@ exports.aabbVsAabb = aabbVsAabb;
 exports.aabbVsObb = aabbVsObb;
 exports.aabbVsCapsule = aabbVsCapsule;
 
-},{"../../../util":48,"./capsule-collision-detection":27,"./obb-collision-detection":28,"./sphere-collision-detection":29}],27:[function(require,module,exports){
+},{"../../../util":40,"./capsule-collision-detection":19,"./obb-collision-detection":20,"./sphere-collision-detection":21}],19:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3140,7 +2246,7 @@ exports.capsuleVsAabb = capsuleVsAabb;
 exports.capsuleVsObb = capsuleVsObb;
 exports.capsuleVsCapsule = capsuleVsCapsule;
 
-},{"../../../util":48,"./obb-collision-detection":28}],28:[function(require,module,exports){
+},{"../../../util":40,"./obb-collision-detection":20}],20:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3297,7 +2403,7 @@ exports.obbVsAabb = obbVsAabb;
 exports.obbVsObb = obbVsObb;
 exports.obbVsCapsule = obbVsCapsule;
 
-},{"../../../util":48,"./aabb-collision-detection":26,"./capsule-collision-detection":27}],29:[function(require,module,exports){
+},{"../../../util":40,"./aabb-collision-detection":18,"./capsule-collision-detection":19}],21:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3375,7 +2481,7 @@ exports.sphereVsAabb = sphereVsAabb;
 exports.sphereVsObb = sphereVsObb;
 exports.sphereVsCapsule = sphereVsCapsule;
 
-},{"../../../util":48,"./capsule-collision-detection":27,"./obb-collision-detection":28}],30:[function(require,module,exports){
+},{"../../../util":40,"./capsule-collision-detection":19,"./obb-collision-detection":20}],22:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3406,7 +2512,7 @@ exports.capsuleContactCalculation = capsuleContactCalculation;
 exports.obbContactCalculation = obbContactCalculation;
 exports.sphereContactCalculation = sphereContactCalculation;
 
-},{"./src/aabb-contact-calculation":31,"./src/capsule-contact-calculation":32,"./src/obb-contact-calculation":33,"./src/sphere-contact-calculation":34}],31:[function(require,module,exports){
+},{"./src/aabb-contact-calculation":23,"./src/capsule-contact-calculation":24,"./src/obb-contact-calculation":25,"./src/sphere-contact-calculation":26}],23:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3558,7 +2664,7 @@ exports.aabbVsObb = aabbVsObb;
 exports.aabbVsCapsule = aabbVsCapsule;
 exports.findAabbNormalFromContactPoint = findAabbNormalFromContactPoint;
 
-},{"../../../util":48,"../../collision-detection":25,"./capsule-contact-calculation":32,"./obb-contact-calculation":33,"./sphere-contact-calculation":34}],32:[function(require,module,exports){
+},{"../../../util":40,"../../collision-detection":17,"./capsule-contact-calculation":24,"./obb-contact-calculation":25,"./sphere-contact-calculation":26}],24:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3700,7 +2806,7 @@ exports.capsuleVsAabb = capsuleVsAabb;
 exports.capsuleVsObb = capsuleVsObb;
 exports.capsuleVsCapsule = capsuleVsCapsule;
 
-},{"../../../util":48,"./obb-contact-calculation":33}],33:[function(require,module,exports){
+},{"../../../util":40,"./obb-contact-calculation":25}],25:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3911,7 +3017,7 @@ exports.obbVsObb = obbVsObb;
 exports.obbVsCapsule = obbVsCapsule;
 exports.findObbNormalFromContactPoint = findObbNormalFromContactPoint;
 
-},{"../../../util":48,"../../collidables":18,"../../collision-detection":25,"./aabb-contact-calculation":31}],34:[function(require,module,exports){
+},{"../../../util":40,"../../collidables":10,"../../collision-detection":17,"./aabb-contact-calculation":23}],26:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4009,7 +3115,7 @@ exports.sphereVsAabb = sphereVsAabb;
 exports.sphereVsObb = sphereVsObb;
 exports.sphereVsCapsule = sphereVsCapsule;
 
-},{"../../../util":48,"./aabb-contact-calculation":31,"./capsule-contact-calculation":32,"./obb-contact-calculation":33}],35:[function(require,module,exports){
+},{"../../../util":40,"./aabb-contact-calculation":23,"./capsule-contact-calculation":24,"./obb-contact-calculation":25}],27:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4112,7 +3218,7 @@ Object.keys(_collisionUtils).forEach(function (key) {
   });
 });
 
-},{"./collidables":18,"./collision-detection":25,"./contact-calculation":30,"./src/collidable-factories":36,"./src/collidable-physics-job":37,"./src/collidable-store":38,"./src/collision-handler":39,"./src/collision-utils":40}],36:[function(require,module,exports){
+},{"./collidables":10,"./collision-detection":17,"./contact-calculation":22,"./src/collidable-factories":28,"./src/collidable-physics-job":29,"./src/collidable-store":30,"./src/collision-handler":31,"./src/collision-utils":32}],28:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4270,7 +3376,7 @@ exports.createSphereOrCapsuleFromRenderableShape = createSphereOrCapsuleFromRend
  * of the capsule.
  */
 
-},{"../../util":48,"../collidables":18}],37:[function(require,module,exports){
+},{"../../util":40,"../collidables":10}],29:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4410,7 +3516,7 @@ exports.CollidablePhysicsJob = CollidablePhysicsJob;
  * @returns {boolean} True if this needs the standard collision restitution to proceed.
  */
 
-},{"../../src/physics-job":46,"../../util":48,"./collidable-factories":36,"./collidable-store":38}],38:[function(require,module,exports){
+},{"../../src/physics-job":38,"../../util":40,"./collidable-factories":28,"./collidable-store":30}],30:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4524,7 +3630,7 @@ exports.collidableStore = collidableStore;
  * @property {number} [time]
  */
 
-},{"./collision-utils":40}],39:[function(require,module,exports){
+},{"./collision-utils":32}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5134,7 +4240,7 @@ exports.recordOldCollisionsForDevModeForAllCollidables = recordOldCollisionsForD
 exports.checkThatNoObjectsCollide = checkThatNoObjectsCollide;
 exports.getOtherControllerFromCollision = getOtherControllerFromCollision;
 
-},{"../../util":48,"./collidable-store":38,"./collision-utils":40}],40:[function(require,module,exports){
+},{"../../util":40,"./collidable-store":30,"./collision-utils":32}],32:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5309,7 +4415,7 @@ exports.detectIntersection = detectIntersection;
 exports.calculateContact = calculateContact;
 exports.detectBoundingVolumeIntersection = detectBoundingVolumeIntersection;
 
-},{"../collidables":18,"../collision-detection":25,"../contact-calculation":30}],41:[function(require,module,exports){
+},{"../collidables":10,"../collision-detection":17,"../contact-calculation":22}],33:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5388,7 +4494,7 @@ Object.keys(_physicsState).forEach(function (key) {
   });
 });
 
-},{"./collisions":35,"./integrator":42,"./src/physics-engine":45,"./src/physics-job":46,"./src/physics-state":47,"./util":48}],42:[function(require,module,exports){
+},{"./collisions":27,"./integrator":34,"./src/physics-engine":37,"./src/physics-job":38,"./src/physics-state":39,"./util":40}],34:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5419,7 +4525,7 @@ Object.keys(_rk4Integrator).forEach(function (key) {
   });
 });
 
-},{"./src/integrator":43,"./src/rk4-integrator":44}],43:[function(require,module,exports){
+},{"./src/integrator":35,"./src/rk4-integrator":36}],35:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5505,7 +4611,7 @@ exports.Integrator = Integrator;
  * @property {number} dt
  */
 
-},{}],44:[function(require,module,exports){
+},{}],36:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5715,7 +4821,7 @@ var rk4Integrator = new RK4Integrator();
 
 exports.rk4Integrator = rk4Integrator;
 
-},{"../../src/physics-state":47,"../../util":48,"./integrator":43}],45:[function(require,module,exports){
+},{"../../src/physics-state":39,"../../util":40,"./integrator":35}],37:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6115,7 +5221,7 @@ var _physicsEngine = null;
 
 exports.PhysicsEngine = PhysicsEngine;
 
-},{"../collisions":35,"../integrator":42,"../util":48,"./physics-state":47,"lsl-animatex":9}],46:[function(require,module,exports){
+},{"../collisions":27,"../integrator":34,"../util":40,"./physics-state":39,"lsl-animatex":1}],38:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6275,7 +5381,7 @@ exports.PhysicsJob = PhysicsJob;
  * @property {number} lowAngularMomentumSuppressionThreshold
  */
 
-},{"../util":48,"./physics-engine":45,"./physics-state":47,"lsl-animatex":9}],47:[function(require,module,exports){
+},{"../util":40,"./physics-engine":37,"./physics-state":39,"lsl-animatex":1}],39:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6408,7 +5514,7 @@ exports.PhysicsState = PhysicsState;
  * @property {mat3} [unrotatedInertiaTensor]
  */
 
-},{"../util":48}],48:[function(require,module,exports){
+},{"../util":40}],40:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6463,7 +5569,7 @@ Object.keys(_util).forEach(function (key) {
   });
 });
 
-},{"./src/force-utils":49,"./src/geometry":50,"./src/inertia-tensor-utils":51,"./src/util":52}],49:[function(require,module,exports){
+},{"./src/force-utils":41,"./src/geometry":42,"./src/inertia-tensor-utils":43,"./src/util":44}],41:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6560,7 +5666,7 @@ exports.applySpringDamping = applySpringDamping;
  * @property {number} dampingCoefficient
  */
 
-},{}],50:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -7054,7 +6160,7 @@ exports.rotateTensor = rotateTensor;
 exports.aabbVsPoint = aabbVsPoint;
 exports.areVec3sClose = areVec3sClose;
 
-},{}],51:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7299,7 +6405,7 @@ exports.createBoxInertiaTensor = createBoxInertiaTensor;
 exports.createCapsuleInertiaTensor = createCapsuleInertiaTensor;
 exports.createForCollidable = createForCollidable;
 
-},{"./geometry":50}],52:[function(require,module,exports){
+},{"./geometry":42}],44:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -7318,7 +6424,7 @@ var _util = {
 
 exports._util = _util;
 
-},{}],53:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7409,7 +6515,7 @@ Object.keys(_overheadCamera).forEach(function (key) {
   });
 });
 
-},{"./src/camera":54,"./src/first-person-camera":55,"./src/fixed-camera":56,"./src/fixed-follow-camera":57,"./src/follow-camera":58,"./src/overhead-camera":59,"./src/third-person-camera":60}],54:[function(require,module,exports){
+},{"./src/camera":46,"./src/first-person-camera":47,"./src/fixed-camera":48,"./src/fixed-follow-camera":49,"./src/follow-camera":50,"./src/overhead-camera":51,"./src/third-person-camera":52}],46:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -7748,7 +6854,7 @@ exports.Camera = Camera;
  * @property {vec3} _up
  */
 
-},{"lsl-animatex":9}],55:[function(require,module,exports){
+},{"lsl-animatex":1}],47:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -7892,7 +6998,7 @@ var FirstPersonCamera = function (_Camera) {
 
 exports.FirstPersonCamera = FirstPersonCamera;
 
-},{"./camera":54}],56:[function(require,module,exports){
+},{"./camera":46}],48:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -8079,7 +7185,7 @@ var FixedCamera = function (_Camera) {
 
 exports.FixedCamera = FixedCamera;
 
-},{"./camera":54}],57:[function(require,module,exports){
+},{"./camera":46}],49:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -8165,7 +7271,7 @@ var FixedFollowCamera = function (_FollowCamera) {
 
 exports.FixedFollowCamera = FixedFollowCamera;
 
-},{"./follow-camera":58}],58:[function(require,module,exports){
+},{"./follow-camera":50}],50:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -8256,7 +7362,7 @@ var FollowCamera = function (_ThirdPersonCamera) {
 
 exports.FollowCamera = FollowCamera;
 
-},{"./third-person-camera":60}],59:[function(require,module,exports){
+},{"./third-person-camera":52}],51:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -8357,7 +7463,7 @@ var OverheadCamera = function (_ThirdPersonCamera) {
 
 exports.OverheadCamera = OverheadCamera;
 
-},{"./third-person-camera":60}],60:[function(require,module,exports){
+},{"./third-person-camera":52}],52:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -8469,7 +7575,7 @@ exports.ThirdPersonCamera = ThirdPersonCamera;
  * @property {mat4} worldTransform The model transform matrix, in world coordinates.
  */
 
-},{"./camera":54}],61:[function(require,module,exports){
+},{"./camera":46}],53:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8572,7 +7678,7 @@ Object.keys(_scene).forEach(function (key) {
   });
 });
 
-},{"./cameras":53,"./models":62,"./program-wrapper":69,"./renderable-shapes":75,"./src/grafx-controller":84,"./src/light":85,"./src/scene":86,"./util":87}],62:[function(require,module,exports){
+},{"./cameras":45,"./models":54,"./program-wrapper":61,"./renderable-shapes":67,"./src/grafx-controller":76,"./src/light":77,"./src/scene":78,"./util":79}],54:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8651,7 +7757,7 @@ Object.keys(_standardModelController).forEach(function (key) {
   });
 });
 
-},{"./src/default-model":63,"./src/invisible-model-controller":64,"./src/model":67,"./src/model-controller":65,"./src/model-group-controller":66,"./src/standard-model-controller":68}],63:[function(require,module,exports){
+},{"./src/default-model":55,"./src/invisible-model-controller":56,"./src/model":59,"./src/model-controller":57,"./src/model-group-controller":58,"./src/standard-model-controller":60}],55:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -8781,7 +7887,7 @@ var DefaultModel = function (_Model) {
 
 exports.DefaultModel = DefaultModel;
 
-},{"../../util":87,"./model":67}],64:[function(require,module,exports){
+},{"../../util":79,"./model":59}],56:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -8880,7 +7986,7 @@ var InvisibleModelController = function (_ModelController) {
 
 exports.InvisibleModelController = InvisibleModelController;
 
-},{"./model-controller":65}],65:[function(require,module,exports){
+},{"./model-controller":57}],57:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -9204,7 +8310,7 @@ exports.ModelController = ModelController;
  * @property {Function.<mat4>} getParentWorldTransform
  */
 
-},{"../../program-wrapper":69,"lsl-animatex":9}],66:[function(require,module,exports){
+},{"../../program-wrapper":61,"lsl-animatex":1}],58:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -9490,7 +8596,7 @@ var ModelGroupController = function (_PersistentAnimationJ) {
 
 exports.ModelGroupController = ModelGroupController;
 
-},{"lsl-animatex":9}],67:[function(require,module,exports){
+},{"lsl-animatex":1}],59:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9624,7 +8730,7 @@ var Model = function () {
 
 exports.Model = Model;
 
-},{}],68:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -9744,7 +8850,7 @@ var StandardModelController = function (_ModelController) {
 
 exports.StandardModelController = StandardModelController;
 
-},{"../../renderable-shapes":75,"./model-controller":65}],69:[function(require,module,exports){
+},{"../../renderable-shapes":67,"./model-controller":57}],61:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9799,7 +8905,7 @@ Object.keys(_uniformSetter).forEach(function (key) {
   });
 });
 
-},{"./src/program-wrapper":72,"./src/program-wrapper-store":71,"./src/texture-store":73,"./src/uniform-setter":74}],70:[function(require,module,exports){
+},{"./src/program-wrapper":64,"./src/program-wrapper-store":63,"./src/texture-store":65,"./src/uniform-setter":66}],62:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9946,7 +9052,7 @@ function _drawChildProgramWrapper(gl, childProgramAndFramebufferIds) {
 
 exports.GroupProgramWrapper = GroupProgramWrapper;
 
-},{"../../util":87,"./program-wrapper-store":71}],71:[function(require,module,exports){
+},{"../../util":79,"./program-wrapper-store":63}],63:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10304,7 +9410,7 @@ var programWrapperStore = exports.programWrapperStore = new ProgramWrapperStore(
  * @property {Array.<ProgramWrapper>} [childrenProgramWrappers]
  */
 
-},{"../../util":87,"./group-program-wrapper":70,"./program-wrapper":72}],72:[function(require,module,exports){
+},{"../../util":79,"./group-program-wrapper":62,"./program-wrapper":64}],64:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10722,7 +9828,7 @@ exports.ProgramWrapper = ProgramWrapper;
 
 /** @typedef {*} UniformData */
 
-},{"../../util":87,"./uniform-setter":74}],73:[function(require,module,exports){
+},{"../../util":79,"./uniform-setter":66}],65:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10857,7 +9963,7 @@ var textureStore = exports.textureStore = new TextureStore();
  * @property {HTMLImageElement} [image]
  */
 
-},{"../../util":87}],74:[function(require,module,exports){
+},{"../../util":79}],66:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11041,7 +10147,7 @@ var UniformSetter = function () {
 
 exports.UniformSetter = UniformSetter;
 
-},{}],75:[function(require,module,exports){
+},{}],67:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11146,7 +10252,7 @@ Object.keys(_renderableShapeStore).forEach(function (key) {
 
 [_capsuleRenderableShape.capsuleRenderableShapeFactory, _cubeRenderableShape.cubeRenderableShapeFactory, _icosahedronRenderableShape.icosahedronRenderableShapeFactory, _icosphereRenderableShape.icosphereRenderableShapeFactory, _latLongSphereRenderableShape.latLongSphereRenderableShapeFactory, _tetrahedronRenderableShape.tetrahedronRenderableShapeFactory].forEach(_renderableShapeFactory.renderableShapeFactory.registerRenderableShapeFactory);
 
-},{"./src/renderable-shape-factory":76,"./src/renderable-shape-store":77,"./src/shape-configs/capsule-renderable-shape":78,"./src/shape-configs/cube-renderable-shape":79,"./src/shape-configs/icosahedron-renderable-shape":80,"./src/shape-configs/icosphere-renderable-shape":81,"./src/shape-configs/lat-long-sphere-renderable-shape":82,"./src/shape-configs/tetrahedron-renderable-shape":83}],76:[function(require,module,exports){
+},{"./src/renderable-shape-factory":68,"./src/renderable-shape-store":69,"./src/shape-configs/capsule-renderable-shape":70,"./src/shape-configs/cube-renderable-shape":71,"./src/shape-configs/icosahedron-renderable-shape":72,"./src/shape-configs/icosphere-renderable-shape":73,"./src/shape-configs/lat-long-sphere-renderable-shape":74,"./src/shape-configs/tetrahedron-renderable-shape":75}],68:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11266,7 +10372,7 @@ exports.renderableShapeFactory = renderableShapeFactory;
  * @property {number} divisionsCount How many times to sub-divide the sphere.
  */
 
-},{"../../models":62,"./renderable-shape-store":77}],77:[function(require,module,exports){
+},{"../../models":54,"./renderable-shape-store":69}],69:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11359,7 +10465,7 @@ var renderableShapeStore = new RenderableShapeStore();
 exports.renderableShapeStore = renderableShapeStore;
 exports.getCacheKey = getCacheKey;
 
-},{}],78:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11609,7 +10715,7 @@ exports.capsuleRenderableShapeFactory = capsuleRenderableShapeFactory;
  * either end of the capsule.
  */
 
-},{"../../../util":87,"../renderable-shape-store":77}],79:[function(require,module,exports){
+},{"../../../util":79,"../renderable-shape-store":69}],71:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11713,7 +10819,7 @@ var cubeRenderableShapeFactory = {
 
 exports.cubeRenderableShapeFactory = cubeRenderableShapeFactory;
 
-},{"../renderable-shape-store":77}],80:[function(require,module,exports){
+},{"../renderable-shape-store":69}],72:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11795,7 +10901,7 @@ var icosahedronRenderableShapeFactory = {
 
 exports.icosahedronRenderableShapeFactory = icosahedronRenderableShapeFactory;
 
-},{"../../../util":87,"../renderable-shape-store":77}],81:[function(require,module,exports){
+},{"../../../util":79,"../renderable-shape-store":69}],73:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11883,7 +10989,7 @@ exports.icosphereRenderableShapeFactory = icosphereRenderableShapeFactory;
  * create this icosphere shape.
  */
 
-},{"../../../util":87,"../renderable-shape-factory":76,"../renderable-shape-store":77}],82:[function(require,module,exports){
+},{"../../../util":79,"../renderable-shape-factory":68,"../renderable-shape-store":69}],74:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11969,7 +11075,7 @@ var latLongSphereRenderableShapeFactory = {
 
 exports.latLongSphereRenderableShapeFactory = latLongSphereRenderableShapeFactory;
 
-},{"../../../util":87,"../renderable-shape-store":77}],83:[function(require,module,exports){
+},{"../../../util":79,"../renderable-shape-store":69}],75:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12049,7 +11155,7 @@ var tetrahedronRenderableShapeFactory = {
 
 exports.tetrahedronRenderableShapeFactory = tetrahedronRenderableShapeFactory;
 
-},{"../../../util":87,"../renderable-shape-store":77}],84:[function(require,module,exports){
+},{"../../../util":79,"../renderable-shape-store":69}],76:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -12069,7 +11175,7 @@ var _createClass = function () {
   };
 }();
 
-var _animatex = require('../../../animatex');
+var _lslAnimatex = require('lsl-animatex');
 
 var _lslPhysx = require('lsl-physx');
 
@@ -12168,8 +11274,8 @@ var GrafxController = function (_PersistentAnimationJ) {
     key: '_startAnimator',
     value: function _startAnimator() {
       // FIXME: Decouple physx
-      _animatex.animator.startJob(_lslPhysx.PhysicsEngine.instance);
-      _animatex.animator.startJob(this);
+      _lslAnimatex.animator.startJob(_lslPhysx.PhysicsEngine.instance);
+      _lslAnimatex.animator.startJob(this);
     }
 
     /**
@@ -12382,7 +11488,7 @@ var GrafxController = function (_PersistentAnimationJ) {
   }]);
 
   return GrafxController;
-}(_animatex.PersistentAnimationJob);
+}(_lslAnimatex.PersistentAnimationJob);
 
 /**
  * @param {WebGLRenderingContext} gl
@@ -12417,7 +11523,7 @@ function _resizeFramebuffersToMatchViewportSize(gl) {
 
 exports.GrafxController = GrafxController;
 
-},{"../../../animatex":1,"../program-wrapper":69,"../util":87,"lsl-physx":17}],85:[function(require,module,exports){
+},{"../program-wrapper":61,"../util":79,"lsl-animatex":1,"lsl-physx":9}],77:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12444,7 +11550,7 @@ var Light = function Light() {
 
 exports.Light = Light;
 
-},{}],86:[function(require,module,exports){
+},{}],78:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -12563,7 +11669,7 @@ var Scene = function (_ModelGroupController) {
 
 exports.Scene = Scene;
 
-},{"../models":62}],87:[function(require,module,exports){
+},{"../models":54}],79:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12618,7 +11724,7 @@ Object.keys(_util).forEach(function (key) {
   });
 });
 
-},{"./src/geometry":88,"./src/gl-util":89,"./src/hash-map":90,"./src/util":91}],88:[function(require,module,exports){
+},{"./src/geometry":80,"./src/gl-util":81,"./src/hash-map":82,"./src/util":83}],80:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12829,7 +11935,7 @@ exports.addRandomRotationToVector = addRandomRotationToVector;
 exports.scaleAndAddQuat = scaleAndAddQuat;
 exports.getMaxVec3Dimension = getMaxVec3Dimension;
 
-},{"./util":91}],89:[function(require,module,exports){
+},{"./util":83}],81:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13916,7 +13022,7 @@ exports.scaleThenTranslatePositions = scaleThenTranslatePositions;
 /** @typedef {Float32Array|Array.<Number>} vec3 */
 /** @typedef {Float32Array|Array.<Number>} vec4 */
 
-},{"../../program-wrapper/src/program-wrapper-store":71,"./geometry":88,"./hash-map":90,"./util":91}],90:[function(require,module,exports){
+},{"../../program-wrapper/src/program-wrapper-store":63,"./geometry":80,"./hash-map":82,"./util":83}],82:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14031,7 +13137,7 @@ var HashMap = function () {
 
 exports.HashMap = HashMap;
 
-},{}],91:[function(require,module,exports){
+},{}],83:[function(require,module,exports){
 'use strict';
 
 var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -15180,6 +14286,6 @@ exports.xlinkNamespace = xlinkNamespace;
  * @property {Number} [a] In the range of [0, 1].
  */
 
-},{}]},{},[61])
+},{}]},{},[53])
 
 //# sourceMappingURL=grafx.js.map
