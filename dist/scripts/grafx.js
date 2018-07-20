@@ -5,67 +5,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _animationJob = require('./src/animation-job');
+var _src = require('./src');
 
-Object.keys(_animationJob).forEach(function (key) {
+Object.keys(_src).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function get() {
-      return _animationJob[key];
+      return _src[key];
     }
   });
 });
 
-var _animator = require('./src/animator');
-
-Object.keys(_animator).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _animator[key];
-    }
-  });
-});
-
-var _frameLatencyProfiler = require('./src/frame-latency-profiler');
-
-Object.keys(_frameLatencyProfiler).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _frameLatencyProfiler[key];
-    }
-  });
-});
-
-var _persistentAnimationJob = require('./src/persistent-animation-job');
-
-Object.keys(_persistentAnimationJob).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _persistentAnimationJob[key];
-    }
-  });
-});
-
-var _transientAnimationJob = require('./src/transient-animation-job');
-
-Object.keys(_transientAnimationJob).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _transientAnimationJob[key];
-    }
-  });
-});
-
-},{"./src/animation-job":2,"./src/animator":3,"./src/frame-latency-profiler":4,"./src/persistent-animation-job":5,"./src/transient-animation-job":6}],2:[function(require,module,exports){
+},{"./src":5}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -537,7 +489,7 @@ exports.animator = animator;
  * millisecond.
  */
 
-},{"./frame-latency-profiler":4,"./persistent-animation-job":5,"./transient-animation-job":6}],4:[function(require,module,exports){
+},{"./frame-latency-profiler":4,"./persistent-animation-job":6,"./transient-animation-job":7}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -649,6 +601,73 @@ exports.FrameLatencyProfiler = FrameLatencyProfiler;
 },{}],5:[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _animationJob = require('./animation-job');
+
+Object.keys(_animationJob).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _animationJob[key];
+    }
+  });
+});
+
+var _animator = require('./animator');
+
+Object.keys(_animator).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _animator[key];
+    }
+  });
+});
+
+var _frameLatencyProfiler = require('./frame-latency-profiler');
+
+Object.keys(_frameLatencyProfiler).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _frameLatencyProfiler[key];
+    }
+  });
+});
+
+var _persistentAnimationJob = require('./persistent-animation-job');
+
+Object.keys(_persistentAnimationJob).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _persistentAnimationJob[key];
+    }
+  });
+});
+
+var _transientAnimationJob = require('./transient-animation-job');
+
+Object.keys(_transientAnimationJob).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _transientAnimationJob[key];
+    }
+  });
+});
+
+},{"./animation-job":2,"./animator":3,"./frame-latency-profiler":4,"./persistent-animation-job":6,"./transient-animation-job":7}],6:[function(require,module,exports){
+'use strict';
+
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 Object.defineProperty(exports, "__esModule", {
@@ -726,7 +745,7 @@ var PersistentAnimationJob = function (_AnimationJob) {
 
 exports.PersistentAnimationJob = PersistentAnimationJob;
 
-},{"./animation-job":2}],6:[function(require,module,exports){
+},{"./animation-job":2}],7:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -814,7 +833,7 @@ var TransientAnimationJob = function (_AnimationJob) {
 
 exports.TransientAnimationJob = TransientAnimationJob;
 
-},{"./animation-job":2,"./util":7}],7:[function(require,module,exports){
+},{"./animation-job":2,"./util":8}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -873,7 +892,7 @@ var _util = {
 
 exports._util = _util;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -940,7 +959,7 @@ Object.keys(_transientAnimationJob).forEach(function (key) {
   });
 });
 
-},{"./src/animation-job":9,"./src/animator":10,"./src/frame-latency-profiler":11,"./src/persistent-animation-job":12,"./src/transient-animation-job":13}],9:[function(require,module,exports){
+},{"./src/animation-job":10,"./src/animator":11,"./src/frame-latency-profiler":12,"./src/persistent-animation-job":13,"./src/transient-animation-job":14}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1055,7 +1074,7 @@ var AnimationJob = function () {
 
 exports.AnimationJob = AnimationJob;
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1391,7 +1410,7 @@ exports.animator = animator;
  * millisecond.
  */
 
-},{"./frame-latency-profiler":11,"./persistent-animation-job":12,"./transient-animation-job":13}],11:[function(require,module,exports){
+},{"./frame-latency-profiler":12,"./persistent-animation-job":13,"./transient-animation-job":14}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1488,7 +1507,7 @@ var FrameLatencyProfiler = function () {
 
 exports.FrameLatencyProfiler = FrameLatencyProfiler;
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1547,7 +1566,7 @@ var PersistentAnimationJob = function (_AnimationJob) {
 
 exports.PersistentAnimationJob = PersistentAnimationJob;
 
-},{"./animation-job":9}],13:[function(require,module,exports){
+},{"./animation-job":10}],14:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1614,7 +1633,7 @@ var TransientAnimationJob = function (_AnimationJob) {
 
 exports.TransientAnimationJob = TransientAnimationJob;
 
-},{"./animation-job":9,"./util":14}],14:[function(require,module,exports){
+},{"./animation-job":10,"./util":15}],15:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1673,12 +1692,12 @@ var _util = {
 
 exports._util = _util;
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 "use strict";
 
 module.exports = {}; // FIXME: Point this to dist
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1769,7 +1788,7 @@ Object.keys(_overheadCamera).forEach(function (key) {
   });
 });
 
-},{"./src/camera":17,"./src/first-person-camera":18,"./src/fixed-camera":19,"./src/fixed-follow-camera":20,"./src/follow-camera":21,"./src/overhead-camera":22,"./src/third-person-camera":23}],17:[function(require,module,exports){
+},{"./src/camera":18,"./src/first-person-camera":19,"./src/fixed-camera":20,"./src/fixed-follow-camera":21,"./src/follow-camera":22,"./src/overhead-camera":23,"./src/third-person-camera":24}],18:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -2108,7 +2127,7 @@ exports.Camera = Camera;
  * @property {vec3} _up
  */
 
-},{"lsl-animatex":8}],18:[function(require,module,exports){
+},{"lsl-animatex":9}],19:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -2252,7 +2271,7 @@ var FirstPersonCamera = function (_Camera) {
 
 exports.FirstPersonCamera = FirstPersonCamera;
 
-},{"./camera":17}],19:[function(require,module,exports){
+},{"./camera":18}],20:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -2439,7 +2458,7 @@ var FixedCamera = function (_Camera) {
 
 exports.FixedCamera = FixedCamera;
 
-},{"./camera":17}],20:[function(require,module,exports){
+},{"./camera":18}],21:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -2525,7 +2544,7 @@ var FixedFollowCamera = function (_FollowCamera) {
 
 exports.FixedFollowCamera = FixedFollowCamera;
 
-},{"./follow-camera":21}],21:[function(require,module,exports){
+},{"./follow-camera":22}],22:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -2616,7 +2635,7 @@ var FollowCamera = function (_ThirdPersonCamera) {
 
 exports.FollowCamera = FollowCamera;
 
-},{"./third-person-camera":23}],22:[function(require,module,exports){
+},{"./third-person-camera":24}],23:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -2717,7 +2736,7 @@ var OverheadCamera = function (_ThirdPersonCamera) {
 
 exports.OverheadCamera = OverheadCamera;
 
-},{"./third-person-camera":23}],23:[function(require,module,exports){
+},{"./third-person-camera":24}],24:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -2829,7 +2848,7 @@ exports.ThirdPersonCamera = ThirdPersonCamera;
  * @property {mat4} worldTransform The model transform matrix, in world coordinates.
  */
 
-},{"./camera":17}],24:[function(require,module,exports){
+},{"./camera":18}],25:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2932,7 +2951,7 @@ Object.keys(_scene).forEach(function (key) {
   });
 });
 
-},{"./cameras":16,"./models":25,"./program-wrapper":32,"./renderable-shapes":38,"./src/grafx-controller":47,"./src/light":48,"./src/scene":49,"./util":50}],25:[function(require,module,exports){
+},{"./cameras":17,"./models":26,"./program-wrapper":33,"./renderable-shapes":39,"./src/grafx-controller":48,"./src/light":49,"./src/scene":50,"./util":51}],26:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3011,7 +3030,7 @@ Object.keys(_standardModelController).forEach(function (key) {
   });
 });
 
-},{"./src/default-model":26,"./src/invisible-model-controller":27,"./src/model":30,"./src/model-controller":28,"./src/model-group-controller":29,"./src/standard-model-controller":31}],26:[function(require,module,exports){
+},{"./src/default-model":27,"./src/invisible-model-controller":28,"./src/model":31,"./src/model-controller":29,"./src/model-group-controller":30,"./src/standard-model-controller":32}],27:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -3141,7 +3160,7 @@ var DefaultModel = function (_Model) {
 
 exports.DefaultModel = DefaultModel;
 
-},{"../../util":50,"./model":30}],27:[function(require,module,exports){
+},{"../../util":51,"./model":31}],28:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -3240,7 +3259,7 @@ var InvisibleModelController = function (_ModelController) {
 
 exports.InvisibleModelController = InvisibleModelController;
 
-},{"./model-controller":28}],28:[function(require,module,exports){
+},{"./model-controller":29}],29:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -3564,7 +3583,7 @@ exports.ModelController = ModelController;
  * @property {Function.<mat4>} getParentWorldTransform
  */
 
-},{"../../program-wrapper":32,"lsl-animatex":8}],29:[function(require,module,exports){
+},{"../../program-wrapper":33,"lsl-animatex":9}],30:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -3850,7 +3869,7 @@ var ModelGroupController = function (_PersistentAnimationJ) {
 
 exports.ModelGroupController = ModelGroupController;
 
-},{"lsl-animatex":8}],30:[function(require,module,exports){
+},{"lsl-animatex":9}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3984,7 +4003,7 @@ var Model = function () {
 
 exports.Model = Model;
 
-},{}],31:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -4104,7 +4123,7 @@ var StandardModelController = function (_ModelController) {
 
 exports.StandardModelController = StandardModelController;
 
-},{"../../renderable-shapes":38,"./model-controller":28}],32:[function(require,module,exports){
+},{"../../renderable-shapes":39,"./model-controller":29}],33:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4159,7 +4178,7 @@ Object.keys(_uniformSetter).forEach(function (key) {
   });
 });
 
-},{"./src/program-wrapper":35,"./src/program-wrapper-store":34,"./src/texture-store":36,"./src/uniform-setter":37}],33:[function(require,module,exports){
+},{"./src/program-wrapper":36,"./src/program-wrapper-store":35,"./src/texture-store":37,"./src/uniform-setter":38}],34:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4306,7 +4325,7 @@ function _drawChildProgramWrapper(gl, childProgramAndFramebufferIds) {
 
 exports.GroupProgramWrapper = GroupProgramWrapper;
 
-},{"../../util":50,"./program-wrapper-store":34}],34:[function(require,module,exports){
+},{"../../util":51,"./program-wrapper-store":35}],35:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4664,7 +4683,7 @@ var programWrapperStore = exports.programWrapperStore = new ProgramWrapperStore(
  * @property {Array.<ProgramWrapper>} [childrenProgramWrappers]
  */
 
-},{"../../util":50,"./group-program-wrapper":33,"./program-wrapper":35}],35:[function(require,module,exports){
+},{"../../util":51,"./group-program-wrapper":34,"./program-wrapper":36}],36:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5082,7 +5101,7 @@ exports.ProgramWrapper = ProgramWrapper;
 
 /** @typedef {*} UniformData */
 
-},{"../../util":50,"./uniform-setter":37}],36:[function(require,module,exports){
+},{"../../util":51,"./uniform-setter":38}],37:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5217,7 +5236,7 @@ var textureStore = exports.textureStore = new TextureStore();
  * @property {HTMLImageElement} [image]
  */
 
-},{"../../util":50}],37:[function(require,module,exports){
+},{"../../util":51}],38:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5401,7 +5420,7 @@ var UniformSetter = function () {
 
 exports.UniformSetter = UniformSetter;
 
-},{}],38:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5506,7 +5525,7 @@ Object.keys(_renderableShapeStore).forEach(function (key) {
 
 [_capsuleRenderableShape.capsuleRenderableShapeFactory, _cubeRenderableShape.cubeRenderableShapeFactory, _icosahedronRenderableShape.icosahedronRenderableShapeFactory, _icosphereRenderableShape.icosphereRenderableShapeFactory, _latLongSphereRenderableShape.latLongSphereRenderableShapeFactory, _tetrahedronRenderableShape.tetrahedronRenderableShapeFactory].forEach(_renderableShapeFactory.renderableShapeFactory.registerRenderableShapeFactory);
 
-},{"./src/renderable-shape-factory":39,"./src/renderable-shape-store":40,"./src/shape-configs/capsule-renderable-shape":41,"./src/shape-configs/cube-renderable-shape":42,"./src/shape-configs/icosahedron-renderable-shape":43,"./src/shape-configs/icosphere-renderable-shape":44,"./src/shape-configs/lat-long-sphere-renderable-shape":45,"./src/shape-configs/tetrahedron-renderable-shape":46}],39:[function(require,module,exports){
+},{"./src/renderable-shape-factory":40,"./src/renderable-shape-store":41,"./src/shape-configs/capsule-renderable-shape":42,"./src/shape-configs/cube-renderable-shape":43,"./src/shape-configs/icosahedron-renderable-shape":44,"./src/shape-configs/icosphere-renderable-shape":45,"./src/shape-configs/lat-long-sphere-renderable-shape":46,"./src/shape-configs/tetrahedron-renderable-shape":47}],40:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5626,7 +5645,7 @@ exports.renderableShapeFactory = renderableShapeFactory;
  * @property {number} divisionsCount How many times to sub-divide the sphere.
  */
 
-},{"../../models":25,"./renderable-shape-store":40}],40:[function(require,module,exports){
+},{"../../models":26,"./renderable-shape-store":41}],41:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5719,7 +5738,7 @@ var renderableShapeStore = new RenderableShapeStore();
 exports.renderableShapeStore = renderableShapeStore;
 exports.getCacheKey = getCacheKey;
 
-},{}],41:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5969,7 +5988,7 @@ exports.capsuleRenderableShapeFactory = capsuleRenderableShapeFactory;
  * either end of the capsule.
  */
 
-},{"../../../util":50,"../renderable-shape-store":40}],42:[function(require,module,exports){
+},{"../../../util":51,"../renderable-shape-store":41}],43:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6073,7 +6092,7 @@ var cubeRenderableShapeFactory = {
 
 exports.cubeRenderableShapeFactory = cubeRenderableShapeFactory;
 
-},{"../renderable-shape-store":40}],43:[function(require,module,exports){
+},{"../renderable-shape-store":41}],44:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6155,7 +6174,7 @@ var icosahedronRenderableShapeFactory = {
 
 exports.icosahedronRenderableShapeFactory = icosahedronRenderableShapeFactory;
 
-},{"../../../util":50,"../renderable-shape-store":40}],44:[function(require,module,exports){
+},{"../../../util":51,"../renderable-shape-store":41}],45:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6243,7 +6262,7 @@ exports.icosphereRenderableShapeFactory = icosphereRenderableShapeFactory;
  * create this icosphere shape.
  */
 
-},{"../../../util":50,"../renderable-shape-factory":39,"../renderable-shape-store":40}],45:[function(require,module,exports){
+},{"../../../util":51,"../renderable-shape-factory":40,"../renderable-shape-store":41}],46:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6329,7 +6348,7 @@ var latLongSphereRenderableShapeFactory = {
 
 exports.latLongSphereRenderableShapeFactory = latLongSphereRenderableShapeFactory;
 
-},{"../../../util":50,"../renderable-shape-store":40}],46:[function(require,module,exports){
+},{"../../../util":51,"../renderable-shape-store":41}],47:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6409,7 +6428,7 @@ var tetrahedronRenderableShapeFactory = {
 
 exports.tetrahedronRenderableShapeFactory = tetrahedronRenderableShapeFactory;
 
-},{"../../../util":50,"../renderable-shape-store":40}],47:[function(require,module,exports){
+},{"../../../util":51,"../renderable-shape-store":41}],48:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -6777,7 +6796,7 @@ function _resizeFramebuffersToMatchViewportSize(gl) {
 
 exports.GrafxController = GrafxController;
 
-},{"../../../animatex":1,"../program-wrapper":32,"../util":50,"lsl-physx":15}],48:[function(require,module,exports){
+},{"../../../animatex":1,"../program-wrapper":33,"../util":51,"lsl-physx":16}],49:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6804,7 +6823,7 @@ var Light = function Light() {
 
 exports.Light = Light;
 
-},{}],49:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -6923,7 +6942,7 @@ var Scene = function (_ModelGroupController) {
 
 exports.Scene = Scene;
 
-},{"../models":25}],50:[function(require,module,exports){
+},{"../models":26}],51:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6978,7 +6997,7 @@ Object.keys(_util).forEach(function (key) {
   });
 });
 
-},{"./src/geometry":51,"./src/gl-util":52,"./src/hash-map":53,"./src/util":54}],51:[function(require,module,exports){
+},{"./src/geometry":52,"./src/gl-util":53,"./src/hash-map":54,"./src/util":55}],52:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7189,7 +7208,7 @@ exports.addRandomRotationToVector = addRandomRotationToVector;
 exports.scaleAndAddQuat = scaleAndAddQuat;
 exports.getMaxVec3Dimension = getMaxVec3Dimension;
 
-},{"./util":54}],52:[function(require,module,exports){
+},{"./util":55}],53:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8276,7 +8295,7 @@ exports.scaleThenTranslatePositions = scaleThenTranslatePositions;
 /** @typedef {Float32Array|Array.<Number>} vec3 */
 /** @typedef {Float32Array|Array.<Number>} vec4 */
 
-},{"../../program-wrapper/src/program-wrapper-store":34,"./geometry":51,"./hash-map":53,"./util":54}],53:[function(require,module,exports){
+},{"../../program-wrapper/src/program-wrapper-store":35,"./geometry":52,"./hash-map":54,"./util":55}],54:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8391,7 +8410,7 @@ var HashMap = function () {
 
 exports.HashMap = HashMap;
 
-},{}],54:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 'use strict';
 
 var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -9540,6 +9559,6 @@ exports.xlinkNamespace = xlinkNamespace;
  * @property {Number} [a] In the range of [0, 1].
  */
 
-},{}]},{},[24])
+},{}]},{},[25])
 
 //# sourceMappingURL=grafx.js.map
