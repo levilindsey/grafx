@@ -1,6 +1,6 @@
 {
   "name": "grafx",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A 3D graphics framework for WebGL",
   "license": "MIT",
   "repository": {
