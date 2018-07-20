@@ -1,4 +1,4 @@
-import {PersistentAnimationJob} from '../../../../animatex';
+import { PersistentAnimationJob } from 'lsl-animatex';
 
 // TODO: Make the rotation quaternion based with 6DoF.
 
@@ -32,7 +32,7 @@ class Camera extends PersistentAnimationJob {
     this._zNear = null;
     this._zFar = null;
     this._position = vec3.create();
-    this._orientation = quat.create();// TODO: Use this.
+    this._orientation = quat.create(); // TODO: Use this.
     this._viewMatrix = mat4.create();
     this._projectionMatrix = mat4.create();
     this._viewProjectionMatrix = mat4.create();
@@ -42,7 +42,7 @@ class Camera extends PersistentAnimationJob {
 
   reset() {
     this._setPerspective(this._cameraParams.fovY, this._cameraParams.defaultAspectRatio,
-        this._cameraParams.zNear, this._cameraParams.zFar);
+      this._cameraParams.zNear, this._cameraParams.zFar);
   }
 
   // TODO: Call this after adding support for dynamically switching cameras.
@@ -72,7 +72,7 @@ class Camera extends PersistentAnimationJob {
    */
   _setLookAtFromCurrentPosition(target, up, viewDirection) {
     mat4.lookAt(this._viewMatrix, this._position, target, up);
-    quat.rotationTo(this._orientation, this._cameraParams._defaultLookAtDirection, viewDirection);// TODO: Check this; might need to swap arguments.
+    quat.rotationTo(this._orientation, this._cameraParams._defaultLookAtDirection, viewDirection); // TODO: Check this; might need to swap arguments.
     this._updateViewProjectionMatrix();
   }
 
@@ -119,7 +119,7 @@ class Camera extends PersistentAnimationJob {
    */
   _updateProjectionMatrix() {
     mat4.perspective(
-        this._projectionMatrix, this._fovY, this._aspectRatio, this._zNear, this._zFar);
+      this._projectionMatrix, this._fovY, this._aspectRatio, this._zNear, this._zFar);
     this._updateViewProjectionMatrix();
   }
 
@@ -159,7 +159,7 @@ class Camera extends PersistentAnimationJob {
    */
   set aspectRatio(aspectRatio) {
     this._setPerspective(this._cameraParams.fovY, aspectRatio, this._cameraParams.zNear,
-        this._cameraParams.zFar);
+      this._cameraParams.zFar);
   }
 
   /** @returns {vec3} */
@@ -179,7 +179,7 @@ class Camera extends PersistentAnimationJob {
     return this._projectionMatrix;
   }
   /** @returns {mat4} */
-  get viewProjectionMatrix() {// TODO: Stop using the above two getters and use this instead?
+  get viewProjectionMatrix() { // TODO: Stop using the above two getters and use this instead?
     return this._viewProjectionMatrix;
   }
 
@@ -205,7 +205,7 @@ class Camera extends PersistentAnimationJob {
   }
 }
 
-export {Camera};
+export { Camera };
 
 /**
  * @typedef {Function} CameraConfig

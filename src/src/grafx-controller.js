@@ -1,20 +1,23 @@
 import {
   animator,
   PersistentAnimationJob
-} from '../../../animatex';
-import {PhysicsEngine} from '../../../physx';
+}
+from '../../../animatex';
+import { PhysicsEngine } from 'lsl-physx';
 import {
   ProgramWrapper,
   programWrapperStore,
   textureStore
-} from '../program-wrapper';
+}
+from '../program-wrapper';
 import {
   bindFramebuffer,
   bindGLContextToViewportDimensions,
   getWebGLContext,
   getViewportHeight,
   getViewportWidth,
-} from '../util';
+}
+from '../util';
 
 /**
  * This top-level Controller class initializes and runs the rest of the app.
@@ -44,12 +47,12 @@ class GrafxController extends PersistentAnimationJob {
     this._canvas = canvas;
 
     return Promise.resolve()
-        .then(() => this._setUpWebGLContext())
-        .then(() => Promise.all([
-          this._preCachePrograms(programConfigs),
-          this._preCacheTextures(texturePaths)
-        ]))
-        .then(() => this._setUpScene(sceneFactory));
+      .then(() => this._setUpWebGLContext())
+      .then(() => Promise.all([
+        this._preCachePrograms(programConfigs),
+        this._preCacheTextures(texturePaths)
+      ]))
+      .then(() => this._setUpScene(sceneFactory));
   }
 
   destroy() {}
@@ -71,7 +74,7 @@ class GrafxController extends PersistentAnimationJob {
     this._startAnimator();
   }
 
-  _startAnimator() {
+  _startAnimator() { // FIXME: Decouple physx
     animator.startJob(PhysicsEngine.instance);
     animator.startJob(this);
   }
@@ -110,9 +113,9 @@ class GrafxController extends PersistentAnimationJob {
     // Draw each program separately. This minimizes how many times we need to switch programs by
     // grouping all of the draw calls for models that use the same program/shaders.
     programWrapperStore.forEachModelProgram((programWrapper, drawFrameHandlers) =>
-        this._drawModelProgram(programWrapper, drawFrameHandlers));
+      this._drawModelProgram(programWrapper, drawFrameHandlers));
     programWrapperStore.forEachPostProcessingProgram(
-        (programWrapper) => this._drawPostProcessingProgram(programWrapper));
+      (programWrapper) => this._drawPostProcessingProgram(programWrapper));
   }
 
   /**
@@ -156,7 +159,8 @@ class GrafxController extends PersistentAnimationJob {
     // Get the WebGL rendering context.
     try {
       this._gl = getWebGLContext(this._canvas);
-    } catch (e) {
+    }
+    catch (e) {
       alert('WebGL is not supported by your browser! :(');
       throw e;
     }
@@ -182,7 +186,7 @@ class GrafxController extends PersistentAnimationJob {
    */
   _preCachePrograms(programConfigs) {
     const promises =
-        programConfigs.map(config => programWrapperStore.loadProgramWrapper(this._gl, config));
+      programConfigs.map(config => programWrapperStore.loadProgramWrapper(this._gl, config));
     return Promise.all(promises);
   }
 
@@ -195,7 +199,7 @@ class GrafxController extends PersistentAnimationJob {
    */
   _preCacheTextures(texturePaths) {
     return Promise.all(texturePaths
-        .map(texturePath => textureStore.loadTexture(this._gl, texturePath)));
+      .map(texturePath => textureStore.loadTexture(this._gl, texturePath)));
   }
 
   /**
@@ -266,4 +270,4 @@ function _resizeFramebuffersToMatchViewportSize(gl) {
   }
 }
 
-export {GrafxController};
+export { GrafxController };

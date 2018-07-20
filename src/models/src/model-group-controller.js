@@ -1,4 +1,4 @@
-import { PersistentAnimationJob } from '../../../../animatex';
+import { PersistentAnimationJob } from 'lsl-animatex';
 
 /**
  * This class controls groups of models.
