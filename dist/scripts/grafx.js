@@ -6603,7 +6603,7 @@ var Camera = function (_PersistentAnimationJ) {
   _createClass(Camera, [{
     key: 'reset',
     value: function reset() {
-      this._setPerspective(this._cameraParams.fovY, this._cameraParams.defaultAspectRatio, this._cameraParams.zNear, this._cameraParams.zFar);
+      this._setPerspective(this._cameraParams.fovY, this._cameraParams.defaultAspectRatio, this._cameraParams._zNear, this._cameraParams._zFar);
     }
 
     // TODO: Call this after adding support for dynamically switching cameras.
@@ -6775,7 +6775,7 @@ var Camera = function (_PersistentAnimationJ) {
   }, {
     key: 'aspectRatio',
     set: function set(aspectRatio) {
-      this._setPerspective(this._cameraParams.fovY, aspectRatio, this._cameraParams.zNear, this._cameraParams.zFar);
+      this._setPerspective(this._cameraParams.fovY, aspectRatio, this._cameraParams._zNear, this._cameraParams._zFar);
     }
 
     /** @returns {vec3} */
@@ -6824,9 +6824,9 @@ exports.Camera = Camera;
 /**
  * @typedef {Function} CameraConfig
  * @property {number} fovY
- * @property {number} zNear
- * @property {number} zFar
  * @property {number} defaultAspectRatio
+ * @property {number} _zNear
+ * @property {number} _zFar
  * @property {vec3} _defaultLookAtDirection
  */
 
@@ -7277,38 +7277,38 @@ exports.FixedFollowCamera = FixedFollowCamera;
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.FollowCamera = undefined;
 
 var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
+    function defineProperties(target, props) {
+        for (var i = 0; i < props.length; i++) {
+            var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }return function (Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+    };
 }();
 
 var _thirdPersonCamera = require('./third-person-camera');
 
 function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+    if (!(instance instanceof Constructor)) {
+        throw new TypeError("Cannot call a class as a function");
+    }
 }
 
 function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+    if (!self) {
+        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
 }
 
 function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+    if (typeof superClass !== "function" && superClass !== null) {
+        throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+    }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
 /**
@@ -7317,47 +7317,47 @@ function _inherits(subClass, superClass) {
  * This is a third-person type of camera whose roll always matches that of the target.
  */
 var FollowCamera = function (_ThirdPersonCamera) {
-  _inherits(FollowCamera, _ThirdPersonCamera);
+    _inherits(FollowCamera, _ThirdPersonCamera);
 
-  function FollowCamera() {
-    _classCallCheck(this, FollowCamera);
+    function FollowCamera() {
+        _classCallCheck(this, FollowCamera);
 
-    return _possibleConstructorReturn(this, (FollowCamera.__proto__ || Object.getPrototypeOf(FollowCamera)).apply(this, arguments));
-  }
-
-  _createClass(FollowCamera, [{
-    key: '_updateOrientation',
-
-    /**
-     * Update the camera's orientation using the "look at" method according to its position and the
-     * position of its target.
-     *
-     * @protected
-     */
-    value: function _updateOrientation() {
-      var target = this._cameraTarget.position;
-
-      var viewDirection = vec3.create();
-      vec3.subtract(viewDirection, target, this._position);
-      vec3.normalize(viewDirection, viewDirection);
-
-      // Initialize "up" as the world z-axis.
-      var up = vec3.fromValues(0, 1, 0);
-
-      // Transform "up" to align with the camera target's local z-axis.
-      vec3.transformQuat(up, up, this._cameraTarget.orientation);
-
-      var right = vec3.create();
-      vec3.cross(right, viewDirection, up);
-
-      // Transform "up" to align with the camera's local z-axis.
-      vec3.cross(up, right, viewDirection);
-
-      this._setPositionAndLookAt(this._position, target, up, viewDirection);
+        return _possibleConstructorReturn(this, (FollowCamera.__proto__ || Object.getPrototypeOf(FollowCamera)).apply(this, arguments));
     }
-  }]);
 
-  return FollowCamera;
+    _createClass(FollowCamera, [{
+        key: '_updateOrientation',
+
+        /**
+         * Update the camera's orientation using the "look at" method according to its position and the
+         * position of its target.
+         *
+         * @protected
+         */
+        value: function _updateOrientation() {
+            var target = this._cameraTarget.position;
+
+            var viewDirection = vec3.create();
+            vec3.subtract(viewDirection, target, this._position);
+            vec3.normalize(viewDirection, viewDirection);
+
+            // Initialize "up" as the world z-axis.
+            var up = vec3.fromValues(0, 1, 0);
+
+            // Transform "up" to align with the camera target's local z-axis.
+            vec3.transformQuat(up, up, this._cameraTarget.orientation);
+
+            var right = vec3.create();
+            vec3.cross(right, viewDirection, up);
+
+            // Transform "up" to align with the camera's local z-axis.
+            vec3.cross(up, right, viewDirection);
+
+            this._setPositionAndLookAt(this._position, target, up, viewDirection);
+        }
+    }]);
+
+    return FollowCamera;
 }(_thirdPersonCamera.ThirdPersonCamera);
 
 exports.FollowCamera = FollowCamera;
