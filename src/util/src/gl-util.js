@@ -218,12 +218,12 @@ function getViewportHeight() {
  * @param {WebGLFramebuffer} framebuffer
  */
 function bindFramebuffer(gl, framebuffer, width, height) {
-  // FIXME: Remove or add back in?
+  // TODO: Remove or add back in?
   // width = width || getViewportWidth();
   // height = height || getViewportHeight();
 
   gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
-  // FIXME: Remove or add back in?
+  // TODO: Remove or add back in?
   // gl.viewport(0, 0, width, height);
 }
 

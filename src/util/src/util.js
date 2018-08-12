@@ -496,7 +496,8 @@ function deepCopy(object) {
 /**
  * Converts the given HSL color values to HSV color values.
  *
- * Given and returned values will be in the range of [0, 1].
+ * Given and returned values will be in the range of [0, 1]. Except h in hsv, which is in the range
+ * of [0,360].
  *
  * @param {HslColor} hsl
  * @returns {{h:Number,s:Number,v:Number}}
@@ -504,7 +505,7 @@ function deepCopy(object) {
 function hslToHsv(hsl) {
   const temp = hsl.s * (hsl.l < 0.5 ? hsl.l : 1 - hsl.l);
   return {
-    h: hsl.h,
+    h: hsl.h * 360.0,
     s: 2 * temp / (hsl.l + temp),
     v: hsl.l + temp
   };
@@ -513,7 +514,8 @@ function hslToHsv(hsl) {
 /**
  * Converts the given HSV color values to HSL color values.
  *
- * Given and returned values will be in the range of [0, 1].
+ * Given and returned values will be in the range of [0, 1]. Except h in hsv, which is in the range
+ * of [0,360].
  *
  * @param {{h:Number,s:Number,v:Number}} hsv
  * @returns {HslColor}
@@ -521,7 +523,7 @@ function hslToHsv(hsl) {
 function hsvToHsl(hsv) {
   const temp = (2 - hsv.s) * hsv.v;
   return {
-    h: hsv.h,
+    h: hsv.h / 360.0,
     s: hsv.s * hsv.v / (temp < 1 ? temp : 2.00000001 - temp),
     l: temp * 0.5
   };

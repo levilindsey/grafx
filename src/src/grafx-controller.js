@@ -58,7 +58,7 @@ class GrafxController extends PersistentAnimationJob {
   destroy() {}
 
   reset() {
-    // FIXME: Will it be easier to replace this with initialize?
+    // TODO: Will it be easier to replace this with initialize?
     this._scene.reset();
   }
 
@@ -74,7 +74,7 @@ class GrafxController extends PersistentAnimationJob {
     this._startAnimator();
   }
 
-  _startAnimator() { // FIXME: Decouple physx
+  _startAnimator() { // TODO: Decouple physx
     animator.startJob(PhysicsEngine.instance);
     animator.startJob(this);
   }

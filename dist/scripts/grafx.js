@@ -7277,38 +7277,38 @@ exports.FixedFollowCamera = FixedFollowCamera;
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.FollowCamera = undefined;
 
 var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
+    function defineProperties(target, props) {
+        for (var i = 0; i < props.length; i++) {
+            var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+        }
+    }return function (Constructor, protoProps, staticProps) {
+        if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+    };
 }();
 
 var _thirdPersonCamera = require('./third-person-camera');
 
 function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+    if (!(instance instanceof Constructor)) {
+        throw new TypeError("Cannot call a class as a function");
+    }
 }
 
 function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+    if (!self) {
+        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
 }
 
 function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+    if (typeof superClass !== "function" && superClass !== null) {
+        throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+    }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
 /**
@@ -7317,47 +7317,47 @@ function _inherits(subClass, superClass) {
  * This is a third-person type of camera whose roll always matches that of the target.
  */
 var FollowCamera = function (_ThirdPersonCamera) {
-  _inherits(FollowCamera, _ThirdPersonCamera);
+    _inherits(FollowCamera, _ThirdPersonCamera);
 
-  function FollowCamera() {
-    _classCallCheck(this, FollowCamera);
+    function FollowCamera() {
+        _classCallCheck(this, FollowCamera);
 
-    return _possibleConstructorReturn(this, (FollowCamera.__proto__ || Object.getPrototypeOf(FollowCamera)).apply(this, arguments));
-  }
-
-  _createClass(FollowCamera, [{
-    key: '_updateOrientation',
-
-    /**
-     * Update the camera's orientation using the "look at" method according to its position and the
-     * position of its target.
-     *
-     * @protected
-     */
-    value: function _updateOrientation() {
-      var target = this._cameraTarget.position;
-
-      var viewDirection = vec3.create();
-      vec3.subtract(viewDirection, target, this._position);
-      vec3.normalize(viewDirection, viewDirection);
-
-      // Initialize "up" as the world z-axis.
-      var up = vec3.fromValues(0, 1, 0);
-
-      // Transform "up" to align with the camera target's local z-axis.
-      vec3.transformQuat(up, up, this._cameraTarget.orientation);
-
-      var right = vec3.create();
-      vec3.cross(right, viewDirection, up);
-
-      // Transform "up" to align with the camera's local z-axis.
-      vec3.cross(up, right, viewDirection);
-
-      this._setPositionAndLookAt(this._position, target, up, viewDirection);
+        return _possibleConstructorReturn(this, (FollowCamera.__proto__ || Object.getPrototypeOf(FollowCamera)).apply(this, arguments));
     }
-  }]);
 
-  return FollowCamera;
+    _createClass(FollowCamera, [{
+        key: '_updateOrientation',
+
+        /**
+         * Update the camera's orientation using the "look at" method according to its position and the
+         * position of its target.
+         *
+         * @protected
+         */
+        value: function _updateOrientation() {
+            var target = this._cameraTarget.position;
+
+            var viewDirection = vec3.create();
+            vec3.subtract(viewDirection, target, this._position);
+            vec3.normalize(viewDirection, viewDirection);
+
+            // Initialize "up" as the world z-axis.
+            var up = vec3.fromValues(0, 1, 0);
+
+            // Transform "up" to align with the camera target's local z-axis.
+            vec3.transformQuat(up, up, this._cameraTarget.orientation);
+
+            var right = vec3.create();
+            vec3.cross(right, viewDirection, up);
+
+            // Transform "up" to align with the camera's local z-axis.
+            vec3.cross(up, right, viewDirection);
+
+            this._setPositionAndLookAt(this._position, target, up, viewDirection);
+        }
+    }]);
+
+    return FollowCamera;
 }(_thirdPersonCamera.ThirdPersonCamera);
 
 exports.FollowCamera = FollowCamera;
@@ -10505,7 +10505,8 @@ function _calculateCapsuleTopShape(params) {
     vertexIndices = null;
     vertexNormals = (0, _util.calculateOrthogonalVertexNormals)(vertexPositions);
   } else {
-    var _dedupVertexArrayWith = (0, _util.dedupVertexArrayWithPositionsAndIndicesArrays)(individualVertexPositions);
+    var _dedupVertexArrayWith = (0, _util.dedupVertexArrayWithPositionsAndIndicesArrays)(individualVertexPositions); // TODO: There is a bug here that causes only one end semi-sphere to render.
+
 
     vertexPositions = _dedupVertexArrayWith.vertexPositions;
     vertexIndices = _dedupVertexArrayWith.vertexIndices;
@@ -11252,7 +11253,7 @@ var GrafxController = function (_PersistentAnimationJ) {
   }, {
     key: 'reset',
     value: function reset() {
-      // FIXME: Will it be easier to replace this with initialize?
+      // TODO: Will it be easier to replace this with initialize?
       this._scene.reset();
     }
 
@@ -11273,7 +11274,7 @@ var GrafxController = function (_PersistentAnimationJ) {
   }, {
     key: '_startAnimator',
     value: function _startAnimator() {
-      // FIXME: Decouple physx
+      // TODO: Decouple physx
       _lslAnimatex.animator.startJob(_lslPhysx.PhysicsEngine.instance);
       _lslAnimatex.animator.startJob(this);
     }
@@ -12166,12 +12167,12 @@ function getViewportHeight() {
  * @param {WebGLFramebuffer} framebuffer
  */
 function bindFramebuffer(gl, framebuffer, width, height) {
-  // FIXME: Remove or add back in?
+  // TODO: Remove or add back in?
   // width = width || getViewportWidth();
   // height = height || getViewportHeight();
 
   gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
-  // FIXME: Remove or add back in?
+  // TODO: Remove or add back in?
   // gl.viewport(0, 0, width, height);
 }
 
@@ -13667,7 +13668,8 @@ function deepCopy(object) {
 /**
  * Converts the given HSL color values to HSV color values.
  *
- * Given and returned values will be in the range of [0, 1].
+ * Given and returned values will be in the range of [0, 1]. Except h in hsv, which is in the range
+ * of [0,360].
  *
  * @param {HslColor} hsl
  * @returns {{h:Number,s:Number,v:Number}}
@@ -13675,7 +13677,7 @@ function deepCopy(object) {
 function hslToHsv(hsl) {
   var temp = hsl.s * (hsl.l < 0.5 ? hsl.l : 1 - hsl.l);
   return {
-    h: hsl.h,
+    h: hsl.h * 360.0,
     s: 2 * temp / (hsl.l + temp),
     v: hsl.l + temp
   };
@@ -13684,7 +13686,8 @@ function hslToHsv(hsl) {
 /**
  * Converts the given HSV color values to HSL color values.
  *
- * Given and returned values will be in the range of [0, 1].
+ * Given and returned values will be in the range of [0, 1]. Except h in hsv, which is in the range
+ * of [0,360].
  *
  * @param {{h:Number,s:Number,v:Number}} hsv
  * @returns {HslColor}
@@ -13692,7 +13695,7 @@ function hslToHsv(hsl) {
 function hsvToHsl(hsv) {
   var temp = (2 - hsv.s) * hsv.v;
   return {
-    h: hsv.h,
+    h: hsv.h / 360.0,
     s: hsv.s * hsv.v / (temp < 1 ? temp : 2.00000001 - temp),
     l: temp * 0.5
   };

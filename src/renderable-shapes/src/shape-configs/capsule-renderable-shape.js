@@ -38,7 +38,7 @@ function _calculateCapsuleTopShape(params) {
     vertexPositions = individualVertexPositions;
     vertexIndices = null;
     vertexNormals = calculateOrthogonalVertexNormals(vertexPositions);
-  } else {
+  } else {// TODO: There is a bug here that causes only one end semi-sphere to render.
     ({vertexPositions, vertexIndices} = dedupVertexArrayWithPositionsAndIndicesArrays(
         individualVertexPositions));
     vertexNormals = vertexPositions;
