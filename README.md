@@ -2,6 +2,8 @@
 
 #### A 3D graphics framework for WebGL.
 
+_DISCLAIMER: This has some rough edges and should probably not be used directly within production apps._
+
 _See this in use at [levi.codes/space-debris][demo]!_
 
 This framework only defines graphics logic. If you also need a 3D physics engine, checkout
