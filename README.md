@@ -58,7 +58,7 @@ Code](./docs/understanding-the-code) for more info.
 
 MIT
 
-[demo]: http://levi.codes/space-debris
+[demo]: http://levi.dev/space-debris
 
 [physx]: https://github.com/levilindsey/physx
 [gamex]: https://github.com/levilindsey/gamex
