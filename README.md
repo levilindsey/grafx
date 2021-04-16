@@ -4,7 +4,7 @@
 
 _DISCLAIMER: This has some rough edges and should probably not be used directly within production apps._
 
-_See this in use at [levi.codes/space-debris][demo]!_
+_See this in use at [levi.dev/space-debris][demo]!_
 
 This framework only defines graphics logic. If you also need a 3D physics engine, checkout
 [physx][physx]. Or checkout [gamex][gamex], a game engine that ties the grafx and physx frameworks
